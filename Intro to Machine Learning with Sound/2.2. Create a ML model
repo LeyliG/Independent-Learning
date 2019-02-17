@@ -1,0 +1,24 @@
+Using IBM Watson Studio to create and run a machine learning model.
+
+Data File: sounds.csv
+Predictor: COLUMN1 (strings: cats or dogs)
+Features: all other columns
+
+Model Technique: Binary Classification because the model is identifying cats and dogs only.
+
+Validation split at 60, 20, 20 (60% to train the models, 20% to test the models, 
+and 20% as a check of the better performing models to detect overfitting.)
+
+Estimators evaluated: Logistic Regression, Decision Tree Classifier,
+Random Forest Classifier, Gradient Boosted Tree Classifier
+
+Output of the models:
+
+ESTIMATOR TYPE	       | 	PERFORMANCE	| AREA UNDER ROC CURVE |	AREA UNDER PR CURVE | 
+RandomForestClassifier  	Excellent	    0.93519	                0.87039	
+
+DecisionTreeClassifier   	Fair	        0.71181               	0.42978	
+
+GBTClassifier           	Poor	        0.66667	                0.35938	
+
+LogisticRegression      	Fail	        0.43287	                0.2777	
