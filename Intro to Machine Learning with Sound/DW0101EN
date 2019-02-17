@@ -1,0 +1,16 @@
+Intro to Machine Learning with Sound
+Cognitive Class
+https://courses.cognitiveclass.ai/
+
+Learning objectives
+In this course, we use IBM Watson Studio to build classification models to predict (identify) 
+animal sounds and use IBM Watson Visual Recognition to identify images of those animals; 
+learn how best to gather and prepare data, create and deploy models, deploy and test a 
+signal processing application, create models with binary and multiclass classifications, 
+and display the predictions on a web page created by using Node-RED.
+
+- Prepare data so that it can be consumed by machine learning models
+- Build a binary classification model that can predict which animal (dogs and cats) is making a specific sound
+- Build a multiclass classification model to detect whether a birdsong is from a bird from a specific order and view the confidence level of that prediction
+- Make predictions on audio files by using a Node-RED application built as a web page
+- Create an application in Node-RED that integrates the Watson Visual Recognition service with your machine learning model to recognize images of cats and dogs
