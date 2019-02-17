@@ -1,0 +1,69 @@
+1.1. Identify a source data set
+
+-  how the data set for the Cats and Dogs machine learning model was built. 
+To create a machine learning model, each entry in the data set needs to be compared with each other. 
+Consequently, the data used to create the model should have the same fields so that they can be compared.
+
+Audio files cannot be compared directly. They will be of differing lengths with varying lengths of opening
+silence before the start of the signature tune or noise. It is difficult to detect the start of the 
+signature noise. It is not just the point at which there is no longer silence. You have no idea of how many 
+bars into the tune the audio recording starts.
+
+For audio files, you can use signal processing to create a series of numbers which represent each audio track. 
+These numbers can be used to compare the tracks and be used as the basis of a machine learning model.
+
+ - used a simplified digital signal processing application to convert the audio track into a 
+table that represents a spectrogram with sound frequency and amplitude as the x and y coordinates. This makes 
+the tracks comparable. 
+- You can find the application for this lab in GitHub 
+(https://github.com/ibm-early-programs/animal-sounds/blob/master/src/ospconverter.py) 
+This application converts the audio files into a comma separated file that contains signal 
+processing profiles for each audio track.
+
+Instructions for gathering and preparing the data:
+1. Open a command or terminal window and create a new directory for the application. 
+For example (using Git CMD):
+mkdir app
+cd app
+
+2. Clone the animal sounds repository:
+
+git clone https://github.com/ibm-early-programs/animal-sounds
+
+3. Change to the new animal sounds directory:
+
+cd animal-sounds
+
+4. If you don’t already have an audio directory, create one for the audio files that you will download from Kaggle:
+
+mkdir audio
+
+5. Sign in to Kaggle and download the cats_dogs.zip file. Extract the files and copy them to the audio directory. 
+The zip file contains the test and train subfolders.
+
+6. Change to the src directory inside the animal-sounds directory: /app/animal-sounds/src
+
+7. Run the pip install command to install the application requirements, which are the converter and the 
+service application that you'll use in a subsequent lab:   pip install -r requirements.txt
+
+If you see an SSL certificate error, upgrade pip:
+curl https://bootstrap.pypa.io/get-pip.py | python3
+
+8. After you upgrade, the requirements installation should succeed.
+Run the converter application that finds the audio files and generates a sound.csv file in the outputs folder:
+
+python ospconverter.py
+
+9. The file soundmac.csv is the same file that is opened and saved as a Mac CSV file by using a spreadsheet tool.
+
+Files on Windows and Macs have different coding for line endings. When you upload the documents to Watson Studio, 
+the line endings are converted to a Linux variant, which might be incorrect if you use the wrong file.
+
+If you have a spreadsheet application, you can open the file and save it as a .csv file with the appropriate line 
+endings for your operating system.
+
+10. Review the generated file.
+Column 1 is the cat and dog classifier, and the remaining columns are the signal processing representation of 
+the related audio tracks.
+
+11. You now have the audio files in a representation that can be used to generate a machine learning model.
