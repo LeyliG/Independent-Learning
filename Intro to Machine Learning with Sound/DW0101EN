@@ -11,6 +11,8 @@ and display the predictions on a web page created by using Node-RED.
 
 - Prepare data so that it can be consumed by machine learning models
 - Build a binary classification model that can predict which animal (dogs and cats) is making a specific sound
-- Build a multiclass classification model to detect whether a birdsong is from a bird from a specific order and view the confidence level of that prediction
+- Build a multiclass classification model to detect whether a birdsong is from a bird from a specific order and 
+  view the confidence level of that prediction
 - Make predictions on audio files by using a Node-RED application built as a web page
-- Create an application in Node-RED that integrates the Watson Visual Recognition service with your machine learning model to recognize images of cats and dogs
+- Create an application in Node-RED that integrates the Watson Visual Recognition service with your machine 
+  learning model to recognize images of cats and dogs
