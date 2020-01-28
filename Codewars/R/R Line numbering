@@ -1,0 +1,33 @@
+'''
+Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+
+Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+Examples:
+
+number(c()) # => c()
+number(c("a", "b", "c")) # => c("1: a", "2: b", "3: c")
+'''
+
+# R code here
+number <- function(lines) {
+  numbering = c()                                   
+  if(length(lines) == 0){
+    return(numbering)
+  } else{    
+    for(i in 1:length(lines)){
+      numbering[i] = paste(i, lines[i], sep = ": ")    
+    }
+    return(numbering)
+  }  
+}
+
+# Sample tests
+test_that("Sample Tests", {
+  expect_equal(number(c()), c())
+  expect_equal(number(c("a", "b", "c")), c("1: a", "2: b", "3: c"))
+  expect_equal(number(c("", "", "", "", "")), c("1: ", "2: ", "3: ", "4: ", "5: "))
+  expect_equal(number(c("", "b", "", "", "")), c("1: ", "2: b", "3: ", "4: ", "5: "))
+})
