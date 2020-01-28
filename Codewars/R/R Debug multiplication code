@@ -1,0 +1,20 @@
+# The code does not execute properly. Try to figure out why.
+
+mul <- function(a, b) {
+  # try to figure out why it doesn't work!
+  # original code: a * c
+  
+  # updated code
+  print(a * b)
+}
+
+
+# Sample test for associativity of multiplication
+test_that("test for associativity of multiplication", {
+  a <- runif(1, 0, 10000)
+  b <- runif(1, 0, 10000)
+  c <- runif(1, 0, 10000)
+  expect_equal(mul(a, b), a * b)
+  expect_equal(mul(mul(a, b), c), a * b * c)
+  expect_equal(mul(a, mul(b, c)), a * b * c)
+})
