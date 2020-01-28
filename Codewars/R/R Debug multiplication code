@@ -5,7 +5,7 @@ mul <- function(a, b) {
   # original code: a * c
   
   # updated code
-  print(a * b)
+  return(a * b)
 }
 
 
