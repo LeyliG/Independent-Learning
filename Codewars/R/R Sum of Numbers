@@ -8,10 +8,14 @@ Note: a and b are not ordered!
 # R code
 get_sum <- function(a, b){
   sum = 0 
-  for(i in min(a,b):max(a,b)){
-    sum = sum + i
+  if(a == b){
+    return(a)
+  } else {    
+      for(i in min(a,b):max(a,b)){
+        sum = sum + i
+      }
+    return(sum)
   }
-  return(sum)
 }
 
 # Sample tests
