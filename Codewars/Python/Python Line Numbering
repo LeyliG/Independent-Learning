@@ -12,15 +12,17 @@ number(["a", "b", "c"]) # => ["1: a", "2: b", "3: c"]
 """
 
 # Python code
-def number(lines):    
+def number(lines):
     out = []
     if lines == []:
         return(lines)
     else:
-        for i in lines:
-            out += (str(i) + ": " + lines[i])
-        
-    return(out)
+        j = 1
+        for i in range(len(lines)): 
+            # out += ': '.join[str(j), i]
+            out.append((str(j) + ": " + i))
+            j += 1 
+    return(out)    
     
 # Sample Tests
 test.assert_equals(number([]), [])
