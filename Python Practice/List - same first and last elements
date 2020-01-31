@@ -21,8 +21,5 @@ false
 class Solution:
     def solve(self, nums):
         # Write your code here
-        if (len(nums) > 1) & (nums[0]==nums[-1]):
-            return(True)
-        else:
-            return(False)
-  
+        return len(nums) > 1 & nums[0] == nums[-1]
+ 
