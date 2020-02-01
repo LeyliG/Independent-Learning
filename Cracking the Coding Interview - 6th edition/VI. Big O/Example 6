@@ -1,0 +1,11 @@
+# Reverse an array
+# O(N) runtime
+
+
+def reverse(n=[]):
+  for i in range(int(len(n)/2)):
+    other = len(n) - i - 1
+    temp = n[i]
+    n[i] = n[other]
+    n[other] = temp
+  return n
