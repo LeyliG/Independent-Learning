@@ -1,0 +1,8 @@
+# print undordered pairs given two arrays
+# O(nm) runtime
+
+def printUnorderedPairs(n=[], m=[]):
+  for i in range(len(n)):
+    for j in range(len(m)):
+      if n[i] < m[j]:
+        print( n[i], ", ", m[j])
