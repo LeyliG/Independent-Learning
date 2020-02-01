@@ -1,0 +1,10 @@
+# Add adjacent elements between 0 and n
+
+def pairSumSequence(n):
+  sums = 0
+  for i in range(n):
+    sums += pairSum(i, i+1)
+  return sums
+
+def pairSum(a, b):
+  return a + b
