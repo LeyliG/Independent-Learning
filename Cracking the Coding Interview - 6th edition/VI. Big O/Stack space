@@ -1,0 +1,7 @@
+# Stack space in recursive calls
+# O(n) time and O(n) space
+
+def sums(n):
+  if n <= 0:
+    return 0
+  return(n + sums(n-1))
