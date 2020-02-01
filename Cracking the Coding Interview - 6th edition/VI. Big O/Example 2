@@ -1,0 +1,6 @@
+# Print all pairs (two-element sequences) with O(N^2) runtime
+
+def printPairs(n=[]):
+  for i in n:
+    for j in n:
+      print(i, ", ", j)
