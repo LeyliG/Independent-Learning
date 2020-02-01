@@ -1,0 +1,11 @@
+# add and multiply the elements
+# p.46
+# O(n) time
+
+def foo(n =[]):
+  sums = 0
+  product = 1
+  for i in range(len(n)):
+    sums += n[i]
+    product *= n[i]
+  print(sums, ", ", product)
