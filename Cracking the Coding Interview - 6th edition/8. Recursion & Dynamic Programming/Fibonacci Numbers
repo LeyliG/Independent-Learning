@@ -1,0 +1,11 @@
+# Recursive Fibonacci with O(2^n) runtime
+
+def recursiveFibonacci(n):
+  if n == 0 or n == 1:
+    return n  
+  
+  return Fibonacci(n-1) + Fibonacci(n-2)
+  
+
+# Memorization (top-down dynamic programming) approach with O(n) runtime
+
