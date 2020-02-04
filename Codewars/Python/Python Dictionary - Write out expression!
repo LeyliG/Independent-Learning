@@ -27,14 +27,17 @@ expression_out("10 - 5") == "Ten Minus Five"
 expression_out("2 = 2")  == "Two Equals Two"
 """
 
-def expression_out(exp):
-    #Your amazing code below!
+# Python solution code 
+def expression_out(exp):    
     exp = exp.split(" ")
     numbers = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six",
     7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten"}
-    
-    exp0 = numbers[int(exp[0])]
-    exp1 = OPERATORS[exp[1]]
-    exp2 = numbers[int(exp[2])]
-    return  exp0 + " " + exp1 + exp2
+        
+    if exp[1] in OPERATORS:
+        exp0 = numbers[int(exp[0])]
+        exp1 = OPERATORS[exp[1]]
+        exp2 = numbers[int(exp[2])]
+    else: 
+        return "That's not an operator!"
 
+    return  exp0 + " " + exp1 + exp2
