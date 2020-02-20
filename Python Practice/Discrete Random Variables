@@ -1,0 +1,31 @@
+'''
+Source:
+https://www.hackerearth.com/practice/machine-learning/prerequisites-of-machine-learning/discrete-random-variables/tutorial/
+
+
+Probability that Alice will accidentally drop her phone to ground is p. 
+She will not be careful after any no.of unfortunate events. 
+Let X be the random variable that equals to the no.of times Alice drops her phone.
+
+Write a program to calculate the expectation value, E(X).
+
+Input constraints:
+p in [0,1]
+
+Input format:
+First line: p
+
+Output format:
+E(X)
+
+'''
+
+
+
+
+# My code here
+p = float(input())
+r = p/((1-p)**2)    
+print(format(r, '.6f'))
+
+
