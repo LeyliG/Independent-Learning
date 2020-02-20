@@ -1,0 +1,34 @@
+'''
+Source:
+https://www.hackerearth.com/practice/machine-learning/prerequisites-of-machine-learning/continuous-random-variables/tutorial/
+
+
+Alice has to wait for her husband at the station and X denotes the times elapsed before he arrives. 
+If given that X is exponentially distributed with lambda = 0.01, what is the probability 
+that Alice has to wait for more than N mins P(X>=N).
+
+Input constraints:
+N>=0
+
+Input format:
+First line: N
+
+Output format:
+Probability of waiting for N minutes, rounded up to six decimal places.
+'''
+
+
+# My code here
+
+# import math package to use exp() function to use e
+import math
+
+N = int(input())
+lambdas = 0.01
+
+# Note: for the Exponential distribution P(X <= N) = 1 - e ^(-lambda*N)
+# Then, P(x >= N) = 1 - P(X <= N) = e ^(-lambda*N)
+
+p = math.exp(-lambdas*N)
+print(format(p, '.6f'))
+
