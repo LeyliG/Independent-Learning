@@ -1,0 +1,29 @@
+/*
+Query the two cities in STATION with the shortest and longest CITY names, 
+as well as their respective lengths (i.e.: number of characters in the name). 
+If there is more than one smallest or largest city, choose the one that comes 
+first when ordered alphabetically.
+
+Input Format
+The STATION table 
+
+Sample Input:
+Let's say that CITY only has four entries: DEF, ABC, PQRS and WXY
+
+Sample Output:
+ABC 3
+PQRS 4
+
+*/
+
+
+SELECT City, LENGTH(City) as len
+FROM STATION 
+ORDER BY len ASC, City 
+LIMIT 1; 
+
+SELECT CITY,LENGTH(CITY) as len
+FROM STATION 
+ORDER BY len DESC, City
+LIMIT 1; 
+ 
