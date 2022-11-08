@@ -18,4 +18,4 @@ List the directory to see your files :
   - *dir*
 
   Outside the directory: 
-    - Get-ChildItem D:\Temp\
+    Get-ChildItem D:\Temp\
