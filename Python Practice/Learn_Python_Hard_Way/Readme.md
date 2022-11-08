@@ -12,4 +12,5 @@ Set-Location -Path "C:\Users\lga\Python"
 
 List the directory to see your files :
 Inside the directory: Get-ChildItem 
+
 Outside the directory: Get-ChildItem D:\Temp\
