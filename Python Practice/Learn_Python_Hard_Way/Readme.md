@@ -1,4 +1,5 @@
 Practice solutions following the LPHW book by Zed A. Shaw
+https://rupert.id.au/python/book/learn-python3-the-hard-way-nov-15-2018.pdf
 
 
 
